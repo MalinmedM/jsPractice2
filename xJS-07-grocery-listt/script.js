@@ -18,3 +18,15 @@ var groceries = [
   "olive oil",
   "mustard",
 ];
+
+console.log(groceries.length);
+
+var deleteDuplicates = function (list) {
+  var cleanList = [];
+  for (var item of list) {
+    if (!cleanList.includes(item)) {
+      cleanList.push(item);
+      return cleanList;
+    }
+  }
+};
