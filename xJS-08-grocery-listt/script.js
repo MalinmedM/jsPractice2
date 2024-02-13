@@ -26,7 +26,14 @@ var deleteDuplicates = function (list) {
   for (var item of list) {
     if (!cleanList.includes(item)) {
       cleanList.push(item);
-      return cleanList;
     }
   }
+  return cleanList;
 };
+
+var newGroceries = deleteDuplicates(groceries);
+console.log(newGroceries.length);
+
+newGroceries.forEach(function (item, index) {
+  console.log(`${index + 1}. ${item}`);
+});
