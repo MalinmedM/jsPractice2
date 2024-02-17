@@ -18,7 +18,7 @@ stuff.forEach(function (item, index) {
 });
 */
 
-// Create function that will remove an element from an array
+/* Create function that will remove an element from an array
 var removeItem = function(array, item) {
   var index = array.indexOf(item);
   if (index = -1) {
@@ -32,4 +32,15 @@ var removeItem = function(array, item) {
 removeItem(stuff, "blankets");
 connsole.log(stuff)
 removeItem(stuff, "hairspray");
-connsole.log(stuff)
+console.log(stuff)
+*/
+
+var esses = [];
+
+for (var item of stuff){
+  if (item.includes("s")){
+    esses.push(item);
+  }
+};
+
+console.log(esses);
