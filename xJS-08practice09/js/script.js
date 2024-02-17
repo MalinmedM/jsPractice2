@@ -35,6 +35,7 @@ removeItem(stuff, "hairspray");
 console.log(stuff)
 */
 
+/*pushing items with s to empty array
 var esses = [];
 
 for (var item of stuff){
@@ -44,3 +45,10 @@ for (var item of stuff){
 };
 
 console.log(esses);
+*/
+
+var filteredEsses = stuff.filter(function(item) {
+  return item.includes("s");
+});
+
+console.log(filteredEsses);
