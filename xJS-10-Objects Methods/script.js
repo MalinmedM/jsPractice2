@@ -16,3 +16,17 @@ console.log(cat.favouriteToys[2]);
 //Access with Bracket notation
 console.log(cat["name"]);
 
+const dog = {
+    name: "Bianca",
+    nickname: "Boobie",
+    age: 6,
+    isSleeping: false,
+    favouriteToys: ["tennis ball", "squeeky toy", "cat"],
+    pet: function() {
+        return "groooowl";
+    }
+};
+
+dog.isSleeping = true;
+dog["color"] = "white";
+console.log(dog);
