@@ -1,3 +1,4 @@
+//Object properties
 const cat = {};
 
 cat.name = "Fred";
@@ -30,3 +31,16 @@ const dog = {
 dog.isSleeping = true;
 dog["color"] = "white";
 console.log(dog);
+
+//THIS keyword
+cat.play = function(){
+    this.isSleeping = false;
+    return `${this.nickname} is awake and playing!`;
+};
+
+console.log(cat.play());
+
+//Compound assignment operators
+let paperClips = 10;
+paperClips += 2;
+console.log(paperClips);
