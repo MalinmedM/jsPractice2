@@ -7,3 +7,15 @@ const currentlyReading = {
   currentChapter: 8,
   totalChapters: 23
 };
+
+console.log(currentlyReading.title);
+console.log(currentlyReading["pages"]);
+
+currentlyReading.awards = "Hugo Award for Best Novel (2016)";
+currentlyReading.upddateChapter = function(chapterNum) {
+  this.currentChapter = chapterNum;
+};
+
+
+currentlyReading.updateChapter (11);
+console.log(currentlyReading);
