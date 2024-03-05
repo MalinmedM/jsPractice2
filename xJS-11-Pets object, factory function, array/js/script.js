@@ -61,7 +61,7 @@ const showPets = function(petArray){
             status = "sleeping";
         };
         const listItem = document.createElement("li");
-        listItem.innerHTML = `<span class="pet-name">${pet.name} the ${pet.species} is ${status}.`;
+        listItem.innerHTML = `<span class="pet-name">${pet.name} the ${pet.species} is ${status}`;
         pets.append(listItem);
     };
 };
