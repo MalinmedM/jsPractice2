@@ -32,7 +32,7 @@ button.addEventListener("click", function () {
     return vehicle.needsRepair === true;
   });
 
-  for (vehicle of vehicleRepairList) {
+  for (let vehicle of vehicleRepairList) {
     let listItem = document.createElement("li");
     listItem.innerHTML = `My<span>${vehicle.type}</span> needs some 💜`;
     repairList.append(listItem);
