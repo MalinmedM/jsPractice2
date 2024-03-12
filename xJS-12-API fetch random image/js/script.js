@@ -7,5 +7,17 @@ const getImage = async function(){
     const res = await fetch("https://picsum.photos/v2/list?limit=100");
     const images = await res.json();
     console.log(images);
+
+    selectRandomImage(images);
 };
 getImage();
+
+//Randomly select the index of an image
+const selectRandomImage = function(images){
+    const randomIndex = Math.floor(Math.random()*images.length);
+    //Testing if it's pulling random whole number between 0 and 99
+    //console.log(randomIndex);
+    const randomImage = images[randomIndex];
+    //Testing if i see a single random image object in the console
+    //console.log(randomImage);
+};
