@@ -20,4 +20,14 @@ const selectRandomImage = function(images){
     const randomImage = images[randomIndex];
     //Testing if i see a single random image object in the console
     //console.log(randomImage);
+    displayImage(randomImage);
 };
+
+//Display the image
+const displayImage = function(randomImage){
+    const author = randomImage.author;
+    const imageAddress = randomImage.download_url;
+    authorSpan.innerText = author;
+    img.src = imageAddress;
+    imgDiv.classList.remove("hide");
+}
