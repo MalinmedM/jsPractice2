@@ -10,7 +10,6 @@ const getImage = async function(){
 
     selectRandomImage(images);
 };
-getImage();
 
 //Randomly select the index of an image
 const selectRandomImage = function(images){
@@ -30,4 +29,8 @@ const displayImage = function(randomImage){
     authorSpan.innerText = author;
     img.src = imageAddress;
     imgDiv.classList.remove("hide");
-}
+};
+
+button.addEventListener("click", function(){
+    getImage();
+})
