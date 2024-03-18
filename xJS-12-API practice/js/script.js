@@ -1,7 +1,8 @@
 const randomFolks = document.querySelector(".random-peeps");
+const selectUserNumber = document.querySelector(".num-users");
 
-const getData = async function(){
-    const usersRequest = await fetch("https://randomuser.me/api?results=5");
+const getData = async function(numUsers){ //modifying when making numUsers parameter
+    const usersRequest = await fetch(`https://randomuser.me/api?results=${numUsers}`); //modifying to get result of numUsers
     const data = await usersRequest.json();
     
     const userResults = data.results; //array of objects
@@ -9,7 +10,7 @@ const getData = async function(){
     displayUsers(userResults);
 };
 
-getData();
+getData(1); //modifying with numUsers installed to number 1
 
 const displayUsers = function(userResults){
     randomFolks.innerHTML = ""; //emptying contents to  not duplicate DOM elements
@@ -27,3 +28,8 @@ const displayUsers = function(userResults){
         randomFolks.append(userDiv);
     }
 };
+
+selectUserNumber.addEventListener("change", function(e){
+    const numUsers = e.target.value;
+    getData(numUsers);
+});
